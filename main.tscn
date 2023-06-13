@@ -1,3 +1,42 @@
-[gd_scene format=3 uid="uid://bcjvnagjwsm1n"]
+[gd_scene load_steps=7 format=3 uid="uid://b1lestdlo0m12"]
+
+[ext_resource type="PackedScene" uid="uid://ct62xn3jag5wx" path="res://level_1.tscn" id="1_4rikb"]
+[ext_resource type="PackedScene" uid="uid://dau81onll6kc3" path="res://objects/paddle.tscn" id="2_kaqfy"]
+[ext_resource type="PackedScene" uid="uid://6ol5iu8pg1pb" path="res://objects/ball.tscn" id="3_3etmo"]
+[ext_resource type="Script" path="res://objects/dead_zone.gd" id="4_mr1kc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmxiw"]
+size = Vector2(720, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5g2h2"]
+size = Vector2(720, 40)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Level1" parent="." instance=ExtResource("1_4rikb")]
+
+[node name="Paddle" parent="." instance=ExtResource("2_kaqfy")]
+position = Vector2(320, 357)
+
+[node name="Ball" parent="." instance=ExtResource("3_3etmo")]
+position = Vector2(320, 339)
+
+[node name="DeadZone" type="Area2D" parent="."]
+script = ExtResource("4_mr1kc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadZone"]
+position = Vector2(320, 413)
+shape = SubResource("RectangleShape2D_pmxiw")
+
+[node name="Bounds" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bounds"]
+polygon = PackedVector2Array(0, 0, 640, 0, 640, 420, 680, 420, 680, -40, -40, -40, -40, 420, 0, 420)
+
+[node name="BottomBound" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomBound"]
+position = Vector2(320, 440)
+shape = SubResource("RectangleShape2D_5g2h2")
+
+[connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]

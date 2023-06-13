@@ -1,17 +1,160 @@
-[gd_scene load_steps=2 format=3 uid="uid://f6tovx6akwvw"]
+[gd_scene load_steps=2 format=3 uid="uid://ct62xn3jag5wx"]
 
-[ext_resource type="PackedScene" uid="uid://cfufv0vklroj7" path="res://block.tscn" id="1_d81u8"]
+[ext_resource type="PackedScene" uid="uid://lamif6myy3m8" path="res://objects/block.tscn" id="1_d81u8"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Block" parent="." instance=ExtResource("1_d81u8")]
-position = Vector2(272, 210)
+position = Vector2(152, 210)
 
 [node name="Block2" parent="." instance=ExtResource("1_d81u8")]
-position = Vector2(304, 210)
+position = Vector2(200, 210)
 
 [node name="Block3" parent="." instance=ExtResource("1_d81u8")]
-position = Vector2(336, 210)
+position = Vector2(248, 210)
 
 [node name="Block4" parent="." instance=ExtResource("1_d81u8")]
-position = Vector2(368, 210)
+position = Vector2(296, 210)
+
+[node name="Block5" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(344, 210)
+
+[node name="Block6" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(392, 210)
+
+[node name="Block7" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(440, 210)
+
+[node name="Block8" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(488, 210)
+
+[node name="Block9" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(152, 186)
+color = 2
+
+[node name="Block10" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(200, 186)
+color = 2
+
+[node name="Block11" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(248, 186)
+color = 2
+
+[node name="Block12" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(296, 186)
+color = 2
+
+[node name="Block13" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(344, 186)
+color = 2
+
+[node name="Block14" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(392, 186)
+color = 2
+
+[node name="Block15" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(440, 186)
+color = 2
+
+[node name="Block16" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(488, 186)
+color = 2
+
+[node name="Block17" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(152, 162)
+color = 1
+
+[node name="Block18" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(200, 162)
+color = 1
+
+[node name="Block19" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(248, 162)
+color = 1
+
+[node name="Block20" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(296, 162)
+color = 1
+
+[node name="Block21" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(344, 162)
+color = 1
+
+[node name="Block22" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(392, 162)
+color = 1
+
+[node name="Block23" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(440, 162)
+color = 1
+
+[node name="Block24" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(488, 162)
+color = 1
+
+[node name="Block25" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(152, 138)
+color = 3
+
+[node name="Block26" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(200, 138)
+color = 3
+
+[node name="Block27" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(248, 138)
+color = 3
+
+[node name="Block28" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(296, 138)
+color = 3
+
+[node name="Block29" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(344, 138)
+color = 3
+
+[node name="Block30" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(392, 138)
+color = 3
+
+[node name="Block31" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(440, 138)
+color = 3
+
+[node name="Block32" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(488, 138)
+color = 3
+
+[node name="Block33" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(152, 114)
+color = 4
+
+[node name="Block34" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(200, 114)
+color = 4
+
+[node name="Block35" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(248, 114)
+color = 4
+
+[node name="Block36" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(296, 114)
+color = 4
+
+[node name="Block37" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(344, 114)
+color = 4
+
+[node name="Block38" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(392, 114)
+color = 4
+
+[node name="Block39" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(440, 114)
+color = 4
+
+[node name="Block40" parent="." instance=ExtResource("1_d81u8")]
+position = Vector2(488, 114)
+color = 4
+
+[node name="Middle" type="Node2D" parent="."]
+position = Vector2(320, 210)

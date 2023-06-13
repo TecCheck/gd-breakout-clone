@@ -1,5 +1,6 @@
 @tool
-extends Sprite2D
+class_name Block
+extends StaticBody2D
 
 signal destroyed(value)
 
@@ -9,12 +10,15 @@ signal destroyed(value)
 	get:
 		return color
 	set(value):
-		self.frame = value
+		_set_color(value)
 		color = value
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	self.frame = color
+	_set_color(color)
+
+func _set_color(color: BlockColor):
+	$Sprite2D.frame = color
 
 func hit():
 	health = health - 1
