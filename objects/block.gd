@@ -2,7 +2,7 @@
 class_name Block
 extends StaticBody2D
 
-signal destroyed(value)
+signal destroyed(block: Block, value: int)
 
 @export var value = 1
 @export var health = 1
@@ -24,7 +24,7 @@ func hit():
 	health = health - 1
 	
 	if health <= 0:
-		destroyed.emit(value)
+		destroyed.emit(self, value)
 		queue_free()
 
 enum BlockColor {

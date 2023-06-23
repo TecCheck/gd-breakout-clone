@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b1lestdlo0m12"]
+[gd_scene load_steps=8 format=3 uid="uid://cftaqjcjw6cmi"]
 
-[ext_resource type="PackedScene" uid="uid://ct62xn3jag5wx" path="res://level_1.tscn" id="1_4rikb"]
+[ext_resource type="PackedScene" uid="uid://ct62xn3jag5wx" path="res://levels/level_1.tscn" id="1_4rikb"]
+[ext_resource type="Script" path="res://main.gd" id="1_5s4d8"]
 [ext_resource type="PackedScene" uid="uid://dau81onll6kc3" path="res://objects/paddle.tscn" id="2_kaqfy"]
 [ext_resource type="PackedScene" uid="uid://6ol5iu8pg1pb" path="res://objects/ball.tscn" id="3_3etmo"]
 [ext_resource type="Script" path="res://objects/dead_zone.gd" id="4_mr1kc"]
@@ -12,6 +13,7 @@ size = Vector2(720, 94)
 size = Vector2(720, 40)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_5s4d8")
 
 [node name="Level1" parent="." instance=ExtResource("1_4rikb")]
 
@@ -39,4 +41,6 @@ polygon = PackedVector2Array(0, 0, 640, 0, 640, 420, 680, 420, 680, -40, -40, -4
 position = Vector2(320, 440)
 shape = SubResource("RectangleShape2D_5g2h2")
 
+[connection signal="done" from="Level1" to="." method="_on_level_done"]
+[connection signal="score_changed" from="Level1" to="." method="_on_level_score_changed"]
 [connection signal="body_entered" from="DeadZone" to="DeadZone" method="_on_body_entered"]
